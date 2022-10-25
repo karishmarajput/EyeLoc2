@@ -1,0 +1,98 @@
+* {
+    font-family: 'Poppins', sans-serif;
+}
+.navbar, .main-form{
+  background: rgba(255, 255, 255, 0.28) !important;
+
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(26.7px);
+  -webkit-backdrop-filter: blur(26.7px);
+  border: 1px solid rgba(255, 255, 255, 0.568);
+}
+
+.navbar-brand{
+    display: flex;
+    justify-content: left;
+}
+
+.navbar-brand div{
+    padding: 0.5rem;
+    position: relative;
+    top: -3.5px;
+
+}
+.main-form {
+    background-color: #FFFDD1;
+    margin: 3rem 4rem;
+    padding: 2rem;
+    border-radius: 2rem;
+}
+
+.form-title {
+    padding-left: 2rem;
+}
+
+.formDiv {
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.formDiv div {
+    align-items: center;
+    padding: .5rem;
+}
+.formDivInputs{
+    width: 50%;
+}
+.formDivImage{
+    width: 50%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.box-op {
+    border-radius: 0.3rem;
+    width: 6rem;
+    margin-left: 0.5rem;
+}
+
+.submit-btn {
+    text-align: center;
+    justify-content: center;
+}
+
+.sub {
+    width: 10rem;
+    height: 3rem;
+    font-size: 1.2rem;
+}
+#colors{
+    background: white;
+    height: 2.5rem;
+    width: 100%;
+    border: 1px solid lightgray;
+    padding: 0.2rem 0.7rem;
+    color: grey;
+}
+body{
+    background-image: url('./asserts/bg-home.png');
+    background-size:cover;
+  }
+@media only screen and (max-width: 600px) {
+    .formDiv{
+      flex-direction: column;
+      padding: 0px;
+    }
+    .formDiv div{
+        width: 100%;
+    }   
+    .main-form{
+        margin: 1rem;
+    }
+    body{
+        background-image: url('./asserts/bg-fone.png');
+        background-size: cover;
+    }
+}

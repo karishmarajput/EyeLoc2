@@ -1,0 +1,306 @@
+* {
+    font-family: 'Poppins', sans-serif;
+  }
+  .navbar, .loginEmail{
+    background: rgba(255, 255, 255, 0.28) !important;
+    border-radius: 2%;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(26.7px);
+    -webkit-backdrop-filter: blur(26.7px);
+    border: 1px solid rgba(255, 255, 255, 0.568);
+  }
+  
+  
+  .loginPasswordDiv {
+    display: none;
+  }
+  
+  .menuDiv {
+    padding: 4.2rem;
+  }
+  
+  
+  .loginEmailDiv{
+  
+    padding: 1rem;
+    border-radius: 2rem;
+    align-items: center;
+  }
+  .bg-size{
+    display: flex;
+    justify-content: center;
+  }
+  
+  .loginEmail{
+    display: flex;
+    align-items: center;
+    flex-direction: column; 
+    width: 35%;
+    background-color: #d1e6f5;
+    padding: 1.8rem 0rem;
+    min-height: 70vh ;
+  }
+  
+  .loginEmail image{
+    width: 80%;
+  }
+  
+  .loginEmail input{
+    padding: .5rem;
+    width: 80%;
+    margin: .2rem;
+    margin-top: 1rem;
+  }
+  
+  .loginEmail button{
+    width: 80%;
+  }
+  
+  .navbar-brand{
+    display: flex;
+    justify-content: left;
+  }
+  
+  .navbar-brand div{
+    padding: 0.5rem;
+    position: relative;
+    top: -3.5px;
+  }
+  
+  #menu {
+    background: #aaa;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 100px;
+    -moz-border-radius: 100px;
+    -webkit-border-radius: 100px;
+    transform: scale(1.5, 1.5);
+    align-items: center;
+  }
+  
+  #center {
+    position: absolute;
+    left: 70px;
+    top: 70px;
+    width: 60px;
+    height: 60px;
+    z-index: 10;
+    background: #eee;
+    background: linear-gradient(top, #eee, #aaa);
+    background: -moz-linear-gradient(top, #eee, #aaa);
+    background: -webkit-gradient(linear, left top, left bottom, from(#eee), to(#aaa));
+    border-radius: 30px;
+    -moz-border-radius: 30px;
+    -webkit-border-radius: 30px;
+  
+  }
+  
+  #center a {
+    display: block;
+    width: 100%;
+    height: 100%
+  }
+  
+  .item {
+    background: #aaa;
+    overflow: hidden;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    transform-origin: 100% 100%;
+    -moz-transform-origin: 100% 100%;
+    -webkit-transform-origin: 100% 100%;
+    transition: background .5s;
+    -moz-transition: background .5s;
+    -webkit-transition: background .5s;
+    -o-transition: background .5s;
+    -ms-transition: background .5s;
+  }
+  
+  
+  .item1 {
+    z-index: 1;
+    transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    background-color: aqua;
+  }
+  
+  .item2 {
+    z-index: 2;
+    transform: rotate(120deg);
+    -moz-transform: rotate(120deg);
+    -webkit-transform: rotate(120deg);
+    background-color: rgb(255, 38, 0);
+  }
+  
+  .item3 {
+    z-index: 3;
+    transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    background-color: rgb(17, 0, 255);
+  }
+  
+  .item4 {
+    z-index: 4;
+    transform: rotate(240deg);
+    -moz-transform: rotate(240deg);
+    -webkit-transform: rotate(240deg);
+    background-color: rgb(255, 0, 255);
+  }
+  
+  .item5 {
+    z-index: 5;
+    transform: rotate(300deg);
+    -moz-transform: rotate(300deg);
+    -webkit-transform: rotate(300deg);
+    background-color: rgb(255, 208, 0);
+  }
+  
+  .item6 {
+    border: none;
+    position: absolute;
+    z-index: 6;
+    transform: rotate(-30deg);
+    -moz-transform: rotate(-30deg);
+    -webkit-transform: rotate(-30deg);
+    background-color: rgb(255, 102, 0);
+  }
+  
+  #wrapper6 {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    transform-origin: 100% 100%;
+    -moz-transform-origin: 100% 100%;
+    -webkit-transform-origin: 100% 100%;
+  }
+  
+  .item1 .content {
+    left: -10px;
+    top: 15px;
+    transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+  }
+  
+  .item2 .content {
+    left: -11px;
+    top: 16px;
+    transform: rotate(-120deg);
+    -moz-transform: rotate(-120deg);
+    -webkit-transform: rotate(-120deg);
+  }
+  
+  .item3 .content {
+    left: -7px;
+    top: 12px;
+    transform: rotate(-180deg);
+    -moz-transform: rotate(-180deg);
+    -webkit-transform: rotate(-180deg);
+  }
+  
+  .item4 .content {
+    left: -5px;
+    top: 18px;
+    transform: rotate(-240deg);
+    -moz-transform: rotate(-240deg);
+    -webkit-transform: rotate(-240deg);
+  }
+  
+  .item5 .content {
+    left: -10px;
+    top: 20px;
+    transform: rotate(-300deg);
+    -moz-transform: rotate(-300deg);
+    -webkit-transform: rotate(-300deg);
+  }
+  
+  .item6 .content {
+    left: 20px;
+    top: -10px;
+    transform: rotate(30deg);
+    -moz-transform: rotate(30deg);
+    -webkit-transform: rotate(30deg);
+  }
+  
+  .content {
+    width: 100%;
+    height: 100%;
+    text-align: center
+  }
+  
+  .content {
+    position: absolute;
+  }
+  
+  .content {
+    line-height: 100px;
+    display: block;
+    position: absolute;
+    text-decoration: none;
+    font-family: 'Segoe UI', Arial, Verdana, sans-serif;
+    font-size: 20px;
+    text-shadow: 1px 1px #eee;
+    text-shadow: 0 0 5px #fff, 0 0 5px #fff, 0 0 5px #fff
+  }
+  
+  .display-target {
+    display: none;
+    text-align: center;
+    opacity: 0;
+  }
+  
+  .display-target:target {
+    display: block;
+    opacity: 1;
+    animation: fade-in 1s;
+    -moz-animation: fade-in 1s;
+    -webkit-animation: fade-in 1s;
+    -o-animation: fade-in 1s;
+    -ms-animation: fade-in 1s;
+  }
+  
+  .button-main {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: block;
+  }
+  
+  .btn {
+    margin: 0.5rem;
+    width: 12rem;
+    background-color: bisque;
+  }
+  
+  .form-fill {
+    width: 25rem;
+    border: 0.1rem solid #5DA7DB;
+    border-radius: 0.5rem;
+    padding: 0.3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .submission {
+    margin-top: 1rem;
+  }
+  body{
+    background-image: url('./asserts/bg-home.png');
+    background-size:cover;
+  }
+  @media only screen and (max-width: 600px) {
+    .loginEmail{
+      width: 100%;
+    }
+    body{
+      background-image: url('./asserts/bg-fone.png');
+      background-size: cover;
+    }
+  
+  }
