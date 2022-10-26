@@ -31,7 +31,15 @@
       </ul>
     </div>
   </nav>
+<div class="messageMain">
+  <div class="messageDiv" id="messageDiv">
+    <div class="messageCross" onclick="messageClose()"><i class="bi bi-x-circle"></i></div>
+    <div class="messageText" id="messageText"> hello</div>
+  </div>
+</div>
+
   <div class="main-form">
+
     <div style="text-align:center">
       <h1>Registration Form</h1>
     </div>
@@ -40,7 +48,7 @@
         <img src="./asserts/p1.png" width="85%" height="auto">
       </div>
       <div class="formDivInputs">
-        <form method="post" action="/">
+        <!-- <form method="post" action="/"> -->
         <div class="form-group">
           <label for="exampleInputPassword1">Name</label>
           <input name="name" type="text" class="form-control" id="regFirstName" placeholder="First Name">
@@ -70,12 +78,13 @@
         <div class="submit-btn">
           <button onclick="submitRegForm()" class="btn btn-success sub">Submit</button>
         </div>
-        </form>
+        <!-- </form> -->
       </div>
     </div>
 
   </div>
-<script src="/regScript.js"></script>
+  <script src="/js/regScript.js"></script>
+
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>

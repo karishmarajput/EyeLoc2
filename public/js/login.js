@@ -1,14 +1,30 @@
+let messageDiv = document.getElementById('messageDiv');
+let messageText = document.getElementById('messageText');
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+ }
+const displayMessage = async(message,bgColour) =>{
+    messageDiv.style.display = 'flex';
+    messageDiv.style.background = bgColour;
+    messageText.innerText = message;
+    await sleep(3000);
+    messageDiv.style.display = 'none';
+
+}
+function messageClose(){
+    messageDiv.style.display = 'none';
+}
+
 var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 let userColour, password;
 function submitEmail(){
     let email = document.getElementById('email').value;
     if(email == ''){
-        alert('Please enter the email');
+        displayMessage('Please enter the email','red');
         return
     }
     if (!email.match(validRegex)) {
-
-        alert("Invalid email address!");
+        displayMessage("Invalid email address!",'red');
         return
     }
     const Http = new XMLHttpRequest();
@@ -17,7 +33,10 @@ function submitEmail(){
 
     Http.onload = (e) => {
       if(Http.status === 400){
-        alert(Http.responseText)
+        let response = Http.responseText;
+        response = JSON.parse(response);
+        console.log(typeof(response))
+        displayMessage(response.msg, 'red');
         return
       }
       let json = JSON.parse(Http.responseText)
@@ -90,10 +109,9 @@ function updateContent(){
 updateContent();
 function checkPass(){
     if(pass.value === password){
-        // alert('correct password');
         window.location.href = "http://localhost:3002/home.html";
     }else{
-        alert('incorrect');
+        displayMessage("Please enter correct Password", 'red');
         pass.value = "";
     }
 }

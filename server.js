@@ -36,10 +36,11 @@ app.get("/login", async(req,res) => {
 	}
 	color = user.color;
 	password = user.password;
+    console.log(color+password)
     res.json({color:color, password:password})
 })
 
-app.post("/", function(req,res){
+app.post("/", async(req,res)=>{
     let newdbUser = new dbUser({
         name: req.body.name,
         email: req.body.email,
@@ -47,9 +48,31 @@ app.post("/", function(req,res){
         color: req.body.colors
 
     })
-    
-    newdbUser.save();
-    res.redirect("/home.html")
+    var name =req.body.name;
+	var email = req.body.email;
+	var password = req.body.password;
+	var color = req.body.color;
+    console.log(name)
+    if(!name || !email || !password || !color){
+		res.status(400).json({msg : "Enter valid details"},)
+        return;
+	}
+	else { 
+        let user = await dbUser.findOne({email})
+        if (user){
+            res.status(400).json({msg : "User already exists"})
+            return;
+        }
+        const success = await newdbUser.save();
+        if(success){
+            res.status(200).json({msg: "User created successfully"})
+        }
+        else{
+            res.status(400).json({msg:"User not created try again"})
+        }
+    }
+    // newdbUser.save();
+    // res.redirect("/home.html")
 } )
 app.listen(3002,function(){
     console.log('listen to 3002')

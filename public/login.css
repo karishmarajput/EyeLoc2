@@ -294,6 +294,32 @@
     background-image: url('./asserts/bg-home.png');
     background-size:cover;
   }
+  .messageMain{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+.messageDiv{
+    height: 4rem;
+    width: 23rem;
+    background-color: red;
+    border-radius: .5rem;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    display: none;
+}
+.messageCross{
+    width: 1rem;
+    height: 1rem;
+    position: fixed;
+    top: 4.8rem;
+    right: 2;
+}
+.messageText{
+    width: 100%;
+    padding: 1rem;
+}
   @media only screen and (max-width: 600px) {
     .loginEmail{
       width: 100%;
